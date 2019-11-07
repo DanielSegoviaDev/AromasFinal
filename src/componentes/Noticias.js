@@ -5,10 +5,10 @@ function Noticias(){
         
         <section id="newsletter">
         <div class="container">
-            <h1>Subscribe to Our Newletter</h1>
+            <h1>Subscribite a nuestro Portal de Noticias</h1>
             <form>
-                <input type="email" placeholder="Enter Email..."/>
-                <button type="submit" class="button_1">Suscribe</button>
+                <input type="email" placeholder="Mail..."/>
+                <button type="submit" class="button_1">Suscribirme!</button>
             </form>
         </div> 
     </section>

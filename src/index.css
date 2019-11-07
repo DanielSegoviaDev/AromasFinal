@@ -87,11 +87,11 @@ header a:hover{
 
 #showCase{
   min-height: 400px;
-  background:url('./imagenes/showcase.jpg') no-repeat 0 -450px;
-  background-position: center;
+  background:url('./imagenes/Velas.jpg') no-repeat 0 -250px;
+  background-position: cover;
   
   text-align:center;
-  color:#fff;
+  color:#000;
 }
 
 #showCase h1{
@@ -158,6 +158,7 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
 
 article#main-col{
   float:left;
+  padding-top: 3rem;
   width:65%;
 
 }

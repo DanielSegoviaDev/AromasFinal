@@ -1,7 +1,7 @@
 import React from 'react';
-import { Html } from '../imagenes/html5.png';
-import { Css } from '../imagenes/css3.png';
-import {Pc} from '../imagenes/web.png';
+import  Entrega  from '../imagenes/Entrega.png';
+import  Aprobado  from '../imagenes/Aprobado.svg';
+import Estrella from '../imagenes/Estrella.svg';
 
 function Elements(){
     return(
@@ -9,19 +9,19 @@ function Elements(){
         <section id="boxes">
             <div class="container">
                 <div class="box">
-                    <img src={Html} alt="HTML5 markup"/>
-                    <h3>HTML5 Markup</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut pbore et dolore magna aliquyam</p>
+                    <img src={Entrega} alt="Icono de Paquete"/>
+                    <h3>Venta al por Mayor y Menor</h3>
+                    <p>En toda nuestra linea de productos y aromas propios</p>
                 </div>
                 <div class="box">
-                    <img src={Css} alt="CSS3 markup"/>
-                    <h3>CSS3 Styling</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut pbore et dolore magna aliquyam</p>
+                    <img src={Aprobado} alt="Un icono de Aprobado"/>
+                    <h3>Multiple Variedad de Productos</h3>
+                    <p>Ademas de poseer multiples saumerios, tenemos a tu disposicion una alta variedad de productos</p>
                 </div>
                 <div class="box">
-                    <img src={Pc} alt="A PC logo"/>
-                    <h3>Graphic Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut pbore et dolore magna aliquyam</p>
+                    <img src={Estrella} alt="Un icono de una Estrella"/>
+                    <h3>Gran experiencia en el Mercado</h3>
+                    <p>Mas de diez años de experiencia en tus gustos y preferencias</p>
                 </div>
             </div>
         </section>

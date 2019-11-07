@@ -5,14 +5,14 @@ function NavBar(){
         <header>
         <div class="container">
             <div id="branding">
-                <h1><span class="highlight">Acme</span> Web Design</h1>
+                <h1><span class="highlight">Aromas</span> del ArcoIris</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/About">About</a></li>
-                    <li><a href="/Services">Servicies</a></li>
-                    <li><a href="/Contact">Contact US</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/About">Nosotros</a></li>
+                    <li><a href="/Services">Servicios</a></li>
+                    <li><a href="/Contact">Contactanos</a></li>
                 </ul>
             </nav>
         </div>

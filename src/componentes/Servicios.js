@@ -1,4 +1,5 @@
 import React from 'react';
+import Consulta from './Consulta';
 
 function Servicios(){
     return(
@@ -26,26 +27,7 @@ function Servicios(){
                     </ul>
             </article>
             
-            <aside id="sidebar">
-                 <div class="dark">
-                        <h3>Get a Quote</h3>
-                    <form class="quote">
-                            <div>
-                                <label>Name</label>
-                                <input type="text" placeholder="Name" />
-                            </div>
-                                <div>
-                                <label>Email</label>
-                                <input type="text" placeholder="Email Address"/>
-                            </div>
-                                <div>
-                                <label>Message</label>
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <button class="button_1" type="submit">Send</button>
-                    </form>
-                 </div>
-             </aside>
+            <Consulta></Consulta>
 
             </div>
         </section>

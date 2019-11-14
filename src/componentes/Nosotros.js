@@ -15,6 +15,8 @@ function Nosotros(){
                     </p>
 
                     <img id="sandra" src={Sandra} alt="Sandra Mirabello, la dueña"></img>
+
+                    <p id="sandra-desc"> Sandra Mirabello</p>
            </article>
         
            <aside id="sidebar">

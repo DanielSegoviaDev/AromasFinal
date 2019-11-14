@@ -1,5 +1,5 @@
 import React from 'react';
-import Noticias from './Noticias';
+
 
 function Header(){
     return(
@@ -11,7 +11,7 @@ function Header(){
             </div>
         </section>
 
-        <Noticias/>
+
        
     </div>
     )

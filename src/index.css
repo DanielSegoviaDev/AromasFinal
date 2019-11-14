@@ -160,6 +160,36 @@ article#main-col #sandra-desc{
   box-shadow: 0 10px 6px -6px #777;
 }
 
+/* Estos son los estilos para nuestros campos inválidos */
+input:invalid{
+  border-color: rgb(252, 0, 0);
+  background-color: rgb(240, 102, 102);
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* Estos son los estilos para nuestros mensajes de error */
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: rgb(231, 6, 6);
+  background-color: rgb(204, 0, 0);
+  border-radius: 0 0 5px   …
+  5px;
+ 
+  -moz-box-sizing: border  …
+  -box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
 
 /* services */
 
@@ -178,6 +208,19 @@ footer{
   color:#fff;
   background-color:#750961;
   text-align:center;
+}
+
+footer a#redes-icon-f{
+  padding: 5px;
+  margin: 5px;
+
+  float: left;
+}
+
+footer a#redes-icon-i{
+  padding: 5px;
+  
+  float: right;
 }
 
 /* media query */

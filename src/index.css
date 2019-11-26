@@ -306,10 +306,20 @@ cursor:pointer;
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  
 }
 
 .overlay-popup.active{
   visibility: visible;
+  background: rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  bottom: 50;
+  left: 0;
+  right: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup{
@@ -364,7 +374,6 @@ td{
 .popup.active{
   opacity: 1;
   transform: scale(1);
-
 }
 
 .popup.active h2{

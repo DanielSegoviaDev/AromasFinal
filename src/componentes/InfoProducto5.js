@@ -4,10 +4,10 @@ import X from '../imagenes/x.png';
 
 
 
-function InfoProductos(props)
+function InfoProducto5(props)
 {
     let cerrar = ()=>{ 
-        props.ocultar0();}
+        props.ocultar5();}
    
     
     if (props.visible)
@@ -80,4 +80,4 @@ function InfoProductos(props)
         }
 }
 
-export default InfoProductos;
+export default InfoProducto5;

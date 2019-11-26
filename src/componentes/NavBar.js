@@ -11,8 +11,7 @@ function NavBar(){
                 <ul>
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/About">Nosotros</a></li>
-                    <li><a href="/Services">Servicios</a></li>
-                    <li><a href="/Contact">Contactanos</a></li>
+                    <li><a href="/Services">Productos</a></li>
                 </ul>
             </nav>
         </div>

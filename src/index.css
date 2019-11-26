@@ -16,6 +16,55 @@ body{
   overflow:hidden;
 }
 
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* esto es parte del global, pero es para uso especifico de los cards de los productos */
+
+.flex-card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+  
+}
+.flex-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container {
+  display:flex;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.cerrar{
+  align-self:stretch;
+}
+.card-container h2{
+  margin-left: 20%;
+}
+.card-container h3{
+  margin-left: 40%;
+  padding-bottom: 10px;
+}
+
+
+.ul-container{
+  border: 1px;
+  width: 100%;
+  
+}
+.ul-container table{
+width: 100%;
+padding-left:9% ;
+}
+
+/* continua el global */
+
 ul{
   margin:0;
   padding:0;
@@ -25,16 +74,23 @@ ul{
   height:38px;
   background:#891073;
   border:none;
+  margin-left: 46%;
   padding-left: 20px;
   padding-right: 20px;
   color:#fff;
 }
 
 .dark{
-  padding:15px;
+  display:row;
   background: #0B262D;
   color:#fff;
-  margin:10px;
+  margin:45px;
+  padding: 15px;
+}
+
+.dark h3{
+  margin-left: 39%;
+  font-size: 25px;
 }
 
 /* header */
@@ -123,16 +179,23 @@ header a:hover{
 }
 
 /* sidebar */
-aside#sidebar{
-  float:right;
-  width:30%;
-  margin-top:150px;
+aside#sidebar label{
+  font-size: 20px;
 }
 
-aside#sidebar .quote input, aside#sidebar .quote textarea{
+aside#sidebar .quote input {
   width: 90%;
-  padding:10px;
+  padding: 10px;
+  margin: 10px;
 }
+
+aside#sidebar .quote textarea{
+  width: 88.5%;
+  padding:20px;
+  margin: 10px;
+}
+
+
 
 /*main col*/
 
@@ -160,36 +223,181 @@ article#main-col #sandra-desc{
   box-shadow: 0 10px 6px -6px #777;
 }
 
-/* Estos son los estilos para nuestros campos inválidos */
-input:invalid{
-  border-color: rgb(252, 0, 0);
-  background-color: rgb(240, 102, 102);
+/* Galeria de imagenes */
+
+.galeria{
+  font-family: 'open sans';
 }
 
-input:focus:invalid {
-  outline: none;
+.linea{
+
+  margin-bottom:40px;
 }
 
-/* Estos son los estilos para nuestros mensajes de error */
-.error {
-  width  : 100%;
-  padding: 0;
- 
-  font-size: 80%;
-  color: rgb(231, 6, 6);
-  background-color: rgb(204, 0, 0);
-  border-radius: 0 0 5px   …
-  5px;
- 
-  -moz-box-sizing: border  …
-  -box;
-  box-sizing: border-box;
+.contenedor_imagenes{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
 }
 
-.error.active {
-  padding: 0.3em;
+.contenedor_imagenes .imagen{
+  width:33%;
+  position: relative;
+  height: 300px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
 }
 
+.imagen img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* arregla el tamaño */
+}
+
+.overlay{
+  position: absolute;
+  bottom:0;
+  left:0;
+  background: rgba(0, 0, 0, 0.55);
+  width:100%;
+  height: 0;
+  transition: 0.75s;
+  overflow:hidden;
+}
+
+.overlay h2{
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  text-align: center;
+  transform: translate(-50%, -80%);
+}
+.imagen:hover .overlay{
+height: 100%;
+cursor:pointer;
+}
+
+.btn-abrir-popup{
+  position: absolute;
+  top: 0;
+  left:0;
+  text-align: center;
+  height: 100%;
+  width:100%;
+  opacity: 0;
+  cursor:pointer;
+}
+
+/* Pop up de descripcion de productos */
+.overlay-popup{
+  background: rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay-popup.active{
+  visibility: visible;
+}
+
+.popup{
+  background: #f8f8f8;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .8);
+  border-radius: 3px;
+  text-align: center;
+  width: 80%;
+
+  transition: .4s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.popup .btn-cerrar-popup{
+  display:block;
+  float:right;
+  border-radius:80%;
+  transition: .3s ease all;
+  
+}
+
+.popup h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+  opacity:0;
+}
+.popup h3{
+  font-size: 28px;
+  opacity:0;
+}
+.popup p{
+  opacity:0;
+}
+.tabla{
+  padding-left: 33%;
+}
+.popup table{
+  font-size: 18px;
+  width:50%;
+  border-collapse: collapse;
+  opacity:0;
+}
+
+td{
+  
+  text-align: center;
+}
+
+/* animaciones */
+
+.popup.active{
+  opacity: 1;
+  transform: scale(1);
+
+}
+
+.popup.active h2{
+  animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active h3{
+  animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active p, td{
+  animation: entradaTexto .8s ease .5s forwards;
+}
+
+@keyframes entradaTitulo{
+  from{
+    transform: translateY(-25px);
+    opacity: 0;
+  } to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaTexto{
+  from{
+    transform: translateY(25px);
+    opacity: 0;
+  } to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* services */
 
@@ -210,18 +418,7 @@ footer{
   text-align:center;
 }
 
-footer a#redes-icon-f{
-  padding: 5px;
-  margin: 5px;
 
-  float: left;
-}
-
-footer a#redes-icon-i{
-  padding: 5px;
-  
-  float: right;
-}
 
 /* media query */
 
@@ -253,7 +450,16 @@ footer a#redes-icon-i{
   }
 
   #newsletter form input[type="email"], .quote input, .quote textarea{
-      width:100%;
+      width:82%;
       margin-bottom: 5px;
+  }
+
+  .contenedor_imagenes{
+    width: 100%;
+  }
+  .contenedor_imagenes .imagen{
+    width: 90%;
+    position: relative;
+    height: auto;
   }
 }

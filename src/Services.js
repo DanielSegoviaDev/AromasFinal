@@ -3,6 +3,7 @@ import NavBar from './componentes/NavBar';
 
 import Footer from './componentes/Footer';
 import Servicios from './componentes/Servicios';
+import InfoProductos from './componentes/InfoProductos';
 
 function Services() {
   return (
@@ -10,6 +11,7 @@ function Services() {
       <NavBar/>
    
       <Servicios/>
+      <InfoProductos/>
       <Footer/>
     </div>
   );

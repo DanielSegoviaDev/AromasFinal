@@ -153,9 +153,11 @@ class Galeria extends Component
     render()
     {
         return(
-            <div className="galeria">
-                <div className="linea"></div>
+            <div className="galeria" >
+                <div className="linea" id="Productos"></div>
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">- Nuestros Productos -</h2>
                 <div className="contenedor_imagenes">
+                    
                     <div className="imagen">
                         <img src={Galeria_1} alt="Producto" className="image" />
                         <div className="overlay" >

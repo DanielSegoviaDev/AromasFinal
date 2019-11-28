@@ -4,14 +4,18 @@ import Galeria from './Galeria';
 
 function Servicios(){
     return(
-        <section id="main">
-            <div class="container">
-            <Galeria/>
-            <Consulta></Consulta>
+        <div>
+            
+                <div class="container" >
+                    
+                <Galeria/>
+                
 
-            </div>
-        </section>
-
+                </div>
+            
+        
+        <Consulta></Consulta>
+        </div>
     )
 }
 

@@ -1,68 +1,26 @@
 import React from 'react';
+import WhatsApp from '../imagenes/whatsapp.png';
+import LArrow from '../imagenes/arrow-left.png';
+import RArrow from '../imagenes/arrow-right.png';
 
 
-function Validar ()
-    {
-        
-        let nombre, mail, consulta, expression, expressionA;
-        nombre = document.getElementById("nombre").value;
-        mail = document.getElementById("email").value;
-        consulta = document.getElementById("consulta").value;
-        expression = /\w+@\w+\.+[a-z]/;  
-  
 
-
-        if(nombre === "" || mail === "" || consulta === ""){
-            alert("Todos los campos son obligatorios");
-            return false;
-        }
-        else if(nombre.length>30){
-            alert("El nombre es muy largo");
-            return false;
-        }
-        else if(mail.length>100){
-            alert("El EMail ingresado es muy largo");
-            return false;
-        }
-        else if(!expression.test(mail) || !expressionA.test(mail)){
-            alert("El correo no es valido");
-            return false;
-        }
-        else if(consulta.length>350){
-            alert("La consulta ingresada es muy larga, ingrese menos de 350 caracteres");
-            return false;
-        }
-
-
-            
-
-    } 
 
 function Consulta(){
-    
-        
+
     return(
-        <aside id="sidebar">
-                 <div class="dark">
-                        <h3>Realiza una Consulta</h3>
-                    <form class="quote" name="Consulta">
-                            <div>
-                                <label>Nombre</label><br></br>
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
-                            </div>
-                                <div>
-                                <label>Email</label><br></br>
-                                <input type="text" name="email" id="email" placeholder="Direccion de Email"/>
-                                <span class="error" aria-live="polite"></span>
-                            </div>
-                                <div>
-                                <label>Mensaje</label><br></br>
-                                <textarea placeholder="Consulta..." name="consulta" id="consulta"></textarea>
-                            </div>
-                            <button class="button_1" type="submit" id="btn" onClick={Validar}> Enviar! </button>
-                    </form>
-                 </div>
-             </aside>
+        <div className="consulta-contenedor">
+            <div className="flex-container">
+                <div className="whatsapp" >
+                    <h2 data-aos="fade-up" data-aos-duration="800">Realiza cualquier consulta por WhatsApp!!</h2>
+                    <img className="Larrow" src={LArrow} alt="flecha izquierda" data-aos="fade-right" data-aos-duration="800"/>
+                    <a title="Click para chatear" href="https://wa.me/5492254441000" target="_blank" rel="noopener noreferrer"><img src={WhatsApp} alt="whatsapp logo"></img></a>
+                    <img className="animated fadeInLeft"  src={RArrow} alt="Flecha derecha" data-aos="fade-left" data-aos-duration="800"/>
+                   
+                </div>
+            </div>
+         </div>
+    
     )
 }
 

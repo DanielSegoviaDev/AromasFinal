@@ -6,21 +6,29 @@ body{
   padding:0;
   margin:0;
   background-color:#FFEDED;
-
+  
 }
+
+
 
 /* global */
 .container{
   width:80%;
   margin:auto;
-  overflow:hidden;
+  
+}
+
+.navbar{
+  width:75%;
+  margin:auto;
+  
 }
 
 .flex-container{
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
 }
+
 
 /* esto es parte del global, pero es para uso especifico de los cards de los productos */
 
@@ -70,30 +78,8 @@ ul{
   padding:0;
 }
 
-.button_1{
-  height:38px;
-  background:#891073;
-  border:none;
-  margin-left: 46%;
-  padding-left: 20px;
-  padding-right: 20px;
-  color:#fff;
-}
 
-.dark{
-  display:row;
-  background: #0B262D;
-  color:#fff;
-  margin:45px;
-  padding: 15px;
-}
-
-.dark h3{
-  margin-left: 39%;
-  font-size: 25px;
-}
-
-/* header */
+ /* header */
 
 header{
   background:#37424a;
@@ -142,36 +128,43 @@ header a:hover{
 /* showCase */
 
 #showCase{
-  min-height: 400px;
-  background:url('./imagenes/Velas.jpg') no-repeat 0 -250px;
+  min-height: 600px;
+  background-image: url('./imagenes/Velas.jpg');
+  background-repeat: no-repeat;
   background-position: cover;
+  background-size:100% auto;
   
   text-align:center;
   color:#000;
-}
 
+} 
 #showCase h1{
-  margin-top:100px;
+  margin: 0;
   font-size:55px;
+  padding-top: 280px;
   margin-bottom:10px;
+  
 }
 
 #showCase p{
   font-size:20px;
+  
 }
 
 
 /*boxes*/
 
 #boxes{
-  margin-top:20px;
+  margin-top: 50px;
+  margin-bottom: 400px;
 }
 
 #boxes .box{
   float:left;
   text-align: center;
   width:30%;
-  padding:10px;
+  padding:15px;
+  
 }
 
 #boxes .box img{
@@ -199,34 +192,51 @@ aside#sidebar .quote textarea{
 
 /*main col*/
 
-article#main-col{
-  float:left;
-  padding-top: 3rem;
-  width:65%;
-
+article.main-col{
+  display:inline-flex;
+  flex-direction: column;
+  margin: 30px;
+  padding-bottom: 35px;
+  padding-top:20px ;
 }
 
+article.main-col .page-title{
+  text-align: center;
+  font-size: 23px;
+}
+
+article.main-col p{
+  font-size:16px;
+  text-align: center;
+}
 /*sandra*/
 
-article#main-col #sandra-desc{
-  float: right;
-  padding-right: 300px;
-  padding-top: 50px;
-  }
 
 #sandra{
-  height: 30%;
-  width: 30%;
+  align-self: center;
+  width: 20%;
   border-radius: 50%;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
 }
 
+#sandra-desc{
+ text-align: center;
+ font-size: 18px;
+}
+
 /* Galeria de imagenes */
 
 .galeria{
-  font-family: 'open sans';
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.galeria h2{
+  text-align: center;
+  font-size: 35px;
 }
 
 .linea{
@@ -408,6 +418,19 @@ td{
   }
 }
 
+/*whatsapp*/
+.consulta-contenedor{
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  background-color: #FAE7E7;
+  }
+
+.whatsapp{
+  text-align: center;
+}
+
+
 /* services */
 
 ul#services li{
@@ -421,7 +444,7 @@ ul#services li{
 
 footer{
   padding:20px;
-  margin-top:20px;
+ 
   color:#fff;
   background-color:#750961;
   text-align:center;
@@ -431,18 +454,21 @@ footer{
 
 /* media query */
 
-@media(max-width:768px){
+@media(max-width:600px){
   header #branding,
   header nav,
-  header nav li
-  #newsletter h1,
-  #newsletter form,
+  header nav li,
   #boxes .box,
-  article#main-col,
+  article.main-col,
   aside#sidebar{
       float:none;
       text-align:center;
       width:100%;
+     
+  }
+  
+  #showCase{
+    background-color: rgba(0, 0, 0, .3);
   }
 
   header{
@@ -450,20 +476,9 @@ footer{
   }
 
   #showcase h1{
-      margin-top:40px;
+    margin-top:40px;
   }
-
-  #newsletter button, .quote button{
-      display:block;
-      width: 100%;
-  }
-
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-      width:82%;
-      margin-bottom: 5px;
-  }
-
-  .contenedor_imagenes{
+    .contenedor_imagenes{
     width: 100%;
   }
   .contenedor_imagenes .imagen{
@@ -471,4 +486,8 @@ footer{
     position: relative;
     height: auto;
   }
+  #sandra{
+    width: 80%;
+    align-content: center; 
+ }
 }

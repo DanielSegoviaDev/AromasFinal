@@ -372,12 +372,11 @@ cursor:pointer;
   width:50%;
   border-collapse: collapse;
   opacity:0;
+  text-align: center;
+  
 }
 
-td{
-  
-  text-align: center;
-}
+
 
 /* animaciones */
 
@@ -394,7 +393,7 @@ td{
   animation: entradaTitulo .8s ease .5s forwards;
 }
 
-.popup.active p, td{
+.popup.active p, table{
   animation: entradaTexto .8s ease .5s forwards;
 }
 

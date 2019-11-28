@@ -23,8 +23,8 @@ function InfoProductos(props)
                         </p>
                         <h3>Aromas</h3>
                         
-                        <div className="tabla ">
-                        <table>
+                        <div className="tabla" >
+                        <table >
                             <tr>
                                 <td>Aroma</td>
                                 <td>Aroma</td>
